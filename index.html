@@ -2,22 +2,70 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Promoción Exclusiva</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ingreso</title>
 
-  <!-- Metadatos neutros (evitan mostrar info de ganamos.io) -->
-  <meta property="og:title" content="Promoción Exclusiva">
-  <meta property="og:description" content="Haz click para acceder a la oferta">
-  <meta property="og:image" content="https://via.placeholder.com/600x315.png?text=Oferta+Especial">
+  <!-- Metadatos neutros para la vista previa en WhatsApp -->
+  <meta property="og:title" content="Ingreso">
+  <meta property="og:description" content="Accede a la promoción">
+  <meta property="og:image" content="https://via.placeholder.com/600x315.png?text=Ingreso">
   <meta name="robots" content="noindex, nofollow">
-</head>
-<body style="display:flex; align-items:center; justify-content:center; height:100vh; font-family:sans-serif;">
-  <h2>Redirigiendo, un momento...</h2>
 
-  <script>
-    // Espera 500ms para que cargue la vista previa neutra y redirige
-    setTimeout(function() {
-      window.location.replace("https://ganamos.io");
-    }, 500);
-  </script>
+  <style>
+    :root{
+      --bg1:#5b21b6; /* morado oscuro */
+      --bg2:#7c3aed; /* morado claro */
+      --txt:#ffffff;
+      --btn:#ffffff;
+      --btnTxt:#5b21b6;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0}
+    body{
+      background: linear-gradient(135deg, var(--bg1), var(--bg2));
+      color: var(--txt);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+      display:flex; align-items:center; justify-content:center;
+      padding: 24px;
+    }
+    .wrap{
+      text-align:center;
+      max-width: 520px;
+      width:100%;
+    }
+    h1{
+      margin:0 0 16px;
+      font-size: clamp(28px, 4vw, 40px);
+      letter-spacing:.5px;
+    }
+    p{
+      margin:0 0 28px;
+      opacity:.9;
+      line-height:1.5;
+    }
+    .btn{
+      display:inline-block;
+      padding:16px 28px;
+      border-radius:14px;
+      text-decoration:none;
+      background: var(--btn);
+      color: var(--btnTxt);
+      font-weight: 700;
+      letter-spacing:.6px;
+      box-shadow: 0 10px 25px rgba(0,0,0,.25);
+      transition: transform .08s ease, box-shadow .2s ease, opacity .2s ease;
+    }
+    .btn:active{ transform: translateY(1px); }
+    .btn:hover{ box-shadow: 0 12px 30px rgba(0,0,0,.3); opacity: .95; }
+    footer{ margin-top:28px; font-size:12px; opacity:.75; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Bienvenido</h1>
+    <p>Toca el botón para continuar.</p>
+    <a class="btn" href="https://ganamos.io" rel="noopener" target="_self">INGRESO</a>
+    <footer>© 2025</footer>
+  </main>
 </body>
 </html>
